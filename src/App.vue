@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <Navbar />
-    <router-view />
+    <GeneralLayout></GeneralLayout>
   </div>
 </template>
 
 <script lang="ts">
-import Navbar from '@/components/BaseNavBar/BaseNavBar.vue';
+import GeneralLayout from '@/components/layout/GeneralLayout.vue';
 
 export default {
   name: 'App',
   components: {
-    Navbar,
+    GeneralLayout,
   },
 };
 </script>
@@ -33,6 +32,7 @@ export default {
   width: 100%;
   margin: 0rem;
   padding: 0rem;
+  overflow-x: hidden;
 }
 
 .flexRow {
@@ -84,13 +84,28 @@ export default {
   align-items: center;
 }
 
-.dropdown-menu {
-  top: 2.5rem;
-}
-
 .dropdown-toggle {
   font-family: 'Poppins', sans-serif !important;
   font-weight: bold !important;
   color: #333333 !important;
+  padding: 0rem !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.dropdown-menu {
+  top: 2.5rem;
+  padding: 0rem !important;
+
+  .dropdown-item {
+    font-family: 'Poppins', sans-serif !important;
+    color: #333333 !important;
+    padding: 0.5rem 1rem !important;
+
+    &:hover {
+      background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+      color: #fff !important;
+    }
+  }
 }
 </style>

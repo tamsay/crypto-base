@@ -4,7 +4,7 @@
     toggleable="lg"
     type="dark"
   >
-    <b-navbar-brand href="#" class="logoDiv flexRow"
+    <b-navbar-brand href="/" class="logoDiv flexRow"
       ><img src="@/assets/icons/logo.svg" alt="logo"
     /></b-navbar-brand>
     <b-navbar-toggle target="nav-collapse" class="toggler">
